@@ -3,9 +3,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "PusherSwift",
+    name: "PusherSwiftLegacy",
     products: [
-        .library(name: "PusherSwift", targets: ["PusherSwift"])
+        .library(name: "PusherSwiftLegacy", targets: ["PusherSwiftLegacy"])
     ],
     dependencies: [
         .package(url: "https://github.com/ashleymills/Reachability.swift.git", .upToNextMajor(from: "5.0.0")),
@@ -13,7 +13,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "PusherSwift",
+            name: "PusherSwiftLegacy",
             dependencies: [
                 "Reachability",
                 "Starscream",
@@ -22,7 +22,7 @@ let package = Package(
             exclude: ["PusherSwiftWithEncryption-Only"]
         ),
         .testTarget(
-            name: "PusherSwiftTests",
+            name: "PusherSwiftLegacyTests",
             dependencies: ["PusherSwift"],
             path: "Tests",
             exclude: ["PusherSwiftWithEncryption-Only"]
